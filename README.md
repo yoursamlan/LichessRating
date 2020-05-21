@@ -8,7 +8,7 @@ Being the admin of [♔♛ সাদা কালো মগজাস্ত্র
 You can download [LichessRating(Windowsx64)](https://github.com/yoursamlan/LichessRating/raw/master/LichessRating.exe)
 
 ## Some useful links:
-[Official Group: ♔♛ সাদা কালো মগজাস্ত্র](https://bn.quora.com/q/daba)
-[Official Team on Lichess: ♔♛ সাদা কালো মগজাস্ত্র](https://lichess.org/team/sAt2fiTW)
+1. [Official Group: ♔♛ সাদা কালো মগজাস্ত্র](https://bn.quora.com/q/daba)
+2. [Official Team on Lichess: ♔♛ সাদা কালো মগজাস্ত্র](https://lichess.org/team/sAt2fiTW)
 
 
