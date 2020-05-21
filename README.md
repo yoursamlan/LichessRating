@@ -5,3 +5,6 @@ Since I am the admin of Bengali Chess Group on quora, I have to look after every
 1. It will generate Rating list of top 5 player in Bullet, Blitz, Rapid and Classical Format
 2. It will ignore all provisional rating.
 
+
+
+
