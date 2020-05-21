@@ -37,7 +37,7 @@ for i in range(len(ulist)):
                 print(uname)
         #Creating Offline Backup
         '''
-        file = uname + ".txt"
+        file = uname + ".bak"
         open(file, "w").close()
         with io.open(file, "w",encoding="utf-8") as txt:
             txt.write(uname)
@@ -58,7 +58,7 @@ classical_rating = {}
 
 for i in range(len(ulist)):
         username = ulist[i]
-        filename = username + ".txt"
+        filename = username + ".bak"
                 
         with open(filename) as fin:
             for line in islice(fin, 1,2):
@@ -135,6 +135,7 @@ print("\nTop 5 classical Player for "+month+" ,"+year)
 print("-"*36)
 for i in range (5):
         print(str(i+1)+". "+str(top_classical[i])+" ("+str(classical_rating.get(str(top_classical[i])))+")")
+
 
 
 
