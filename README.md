@@ -5,7 +5,7 @@ Being the admin of [♔♛ সাদা কালো মগজাস্ত্র
 1. It will generate Rating list of top 5 player in Bullet, Blitz, Rapid and Classical Format
 2. It will ignore all provisional rating.
 
-You can download [LichessRating(Windowsx64)](https://github.com/yoursamlan/LichessRating/raw/master/LichessRating.exe)
+You can download [**LichessRating(WINDOWS_x64)**](https://github.com/yoursamlan/LichessRating/raw/master/LichessRating.exe)
 
 ### Some useful links:
 - [Official Group: ♔♛ সাদা কালো মগজাস্ত্র](https://bn.quora.com/q/daba)
