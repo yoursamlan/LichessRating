@@ -1,8 +1,11 @@
-#Lichess Rating List Generator
+#Lichess Rating List Generator v0.2
 #Amlan Saha Kundu
-#=========================================================
 
-import requests,io,datetime
+#ChangeLog v0.2:
+#Backup files will now be generated inside a Folder for cleaner look. 
+#======================================================================
+
+import requests,io,datetime,os
 from bs4 import BeautifulSoup
 from itertools import islice
 from heapq import nlargest
@@ -12,6 +15,15 @@ from heapq import nlargest
 x = datetime.datetime.now()
 month = x.strftime("%b")
 year = x.strftime("%Y")
+
+#Creating directory for backup files
+flag = 0
+while flag==0:
+        try:
+                os.chdir("BackUp"+str(x)[:10])
+                flag = flag+1
+        except:
+                os.mkdir("BackUp"+str(x)[:10])
 
 #Username List
 
@@ -46,7 +58,7 @@ for i in range(len(ulist)):
                         txt.write("\n"+str(item.text.strip()))
                         #print(item.text.strip())
         txt.close()
-print("Saved offline backup SUCCESSFULLY")
+print("\nSaved offline backup SUCCESSFULLY")
 #Initialize Dictionary
 
 bullet_rating = {}
@@ -135,6 +147,9 @@ print("\nTop 5 classical Player for "+month+" ,"+year)
 print("-"*36)
 for i in range (5):
         print(str(i+1)+". "+str(top_classical[i])+" ("+str(classical_rating.get(str(top_classical[i])))+")")
+
+exit0 = input()
+
 
 
 
