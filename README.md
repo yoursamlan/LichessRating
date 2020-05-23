@@ -15,9 +15,10 @@ Report will be shown in terminal, as well as will be available offline in .txt f
 ### Report Card Example
 ![ReportCard](./Report.PNG)
 
-You can download [**LichessRating(WINDOWS_x64)**](https://github.com/yoursamlan/LichessRating/raw/master/LichessRating.exe)
+### Download
+[![WINDOWS](./icon.ico)](https://github.com/yoursamlan/LichessRating/raw/master/LichessRating.exe)
 
-App Screen Shot:
+### Screen Shot:
 ![Screen Shot](./scrnsht.PNG)
 
 ### Some useful links:
