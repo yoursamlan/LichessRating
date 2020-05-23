@@ -5,6 +5,16 @@ Being the admin of [♔♛ সাদা কালো মগজাস্ত্র
 1. It will generate Rating list of top 5 player in Bullet, Blitz, Rapid and Classical Format
 2. It will ignore all provisional rating.
 
+### ChangeLogs
+*ChangeLog v0.2:
+Backup files will now be generated inside a Folder for cleaner look.*
+
+*ChangeLog v0.3:
+Report will be shown in terminal, as well as will be available offline in .txt format*
+
+### Report Card Example
+[ReportCard](./Report.PNG)
+
 You can download [**LichessRating(WINDOWS_x64)**](https://github.com/yoursamlan/LichessRating/raw/master/LichessRating.exe)
 
 ### Some useful links:
