@@ -13,7 +13,7 @@ Backup files will now be generated inside a Folder for cleaner look.*
 Report will be shown in terminal, as well as will be available offline in .txt format*
 
 ### Report Card Example
-[!ReportCard](./Report.PNG)
+![ReportCard](./Report.PNG)
 
 You can download [**LichessRating(WINDOWS_x64)**](https://github.com/yoursamlan/LichessRating/raw/master/LichessRating.exe)
 
