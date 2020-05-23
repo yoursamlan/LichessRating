@@ -1,9 +1,12 @@
-#Lichess Rating List Generator v0.2
+#Lichess Rating List Generator v0.3
 #Amlan Saha Kundu
 
 #ChangeLog v0.2:
-#Backup files will now be generated inside a Folder for cleaner look. 
-#======================================================================
+#Backup files will now be generated inside a Folder for cleaner look.
+
+#ChangeLog v0.3:
+#Report will be shown in terminal, as well as will be available offline in .txt format 
+#==========================================================================================
 
 import requests,io,datetime,os
 from bs4 import BeautifulSoup
@@ -27,9 +30,9 @@ while flag==0:
 
 #Username List
 
-ulist = ['bhaluu','atanu','Joyotu_senior','kimkortobyobimurah','Julkifol','Subhendu519','rakibalhsn','Tirtha_Ch','cyborg18','Daniel_Rozario','Imran_Shorif_Shuvo','Samadarshi']
+ulist = ['bhaluu','atanu','Joyotu_senior','kimkortobyobimurah','Julkifol','Subhendu519','rakibalhsn','Tirtha_Ch','cyborg18','Daniel_Rozario','Imran_Shorif_Shuvo','Samadarshi','i_knownothing']
 
-print("Collecting Data...")
+print("Collecting Data...\n")
 #Data Collection
 for i in range(len(ulist)):
         username = ulist[i]
@@ -112,45 +115,63 @@ for i in range(len(ulist)):
 
 #Ranking List Generation
 
-#print(bullet_rating)
-                
-top_bullet = nlargest(5,bullet_rating, key = bullet_rating.get)
+report = "Report.txt"
+with io.open(report, "w",encoding="utf-8") as rep:
+        rep.write("Lichess Rating List Generator v0.3 \nby Amlan Saha Kundu\n\nREPORT CARD for ♔♛ সাদা কালো মগজাস্ত্র\nGenerated at: "+str(x)+"\n\n")
+        #print(bullet_rating)
+                        
+        top_bullet = nlargest(5,bullet_rating, key = bullet_rating.get)
 
-print("\nTop 5 Bullet Player for "+month+" ,"+year)
-print("-"*36)
-for i in range (5):
-        print(str(i+1)+". "+str(top_bullet[i])+" ("+str(bullet_rating.get(str(top_bullet[i])))+")")
+        print("\nTop 5 Bullet Player for "+month+", "+year)
+        print("-"*36)
+        rep.write("\nTop 5 Bullet Player for "+month+", "+year+"\n")
+        rep.write("-"*36+"\n")
+        for i in range (5):
+                print(str(i+1)+". "+str(top_bullet[i])+" ("+str(bullet_rating.get(str(top_bullet[i])))+")")
+                rep.write(str(i+1)+". "+str(top_bullet[i])+" ("+str(bullet_rating.get(str(top_bullet[i])))+")"+"\n")
 
-#print(blitz_rating)
-                
-top_blitz = nlargest(5,blitz_rating, key = blitz_rating.get)
+        #print(blitz_rating)
+                        
+        top_blitz = nlargest(5,blitz_rating, key = blitz_rating.get)
 
-print("\nTop 5 Blitz Player for "+month+" ,"+year)
-print("-"*36)
-for i in range (5):
-        print(str(i+1)+". "+str(top_blitz[i])+" ("+str(blitz_rating.get(str(top_blitz[i])))+")")
+        print("\nTop 5 Blitz Player for "+month+", "+year)
+        print("-"*36)
+        rep.write("\nTop 5 Blitz Player for "+month+", "+year+"\n")
+        rep.write("-"*36+"\n")
+        for i in range (5):
+                print(str(i+1)+". "+str(top_blitz[i])+" ("+str(blitz_rating.get(str(top_blitz[i])))+")")
+                rep.write(str(i+1)+". "+str(top_blitz[i])+" ("+str(blitz_rating.get(str(top_blitz[i])))+")"+"\n")
 
-#print(rapid_rating)
-                
-top_rapid = nlargest(5,rapid_rating, key = rapid_rating.get)
+        #print(rapid_rating)
+                        
+        top_rapid = nlargest(5,rapid_rating, key = rapid_rating.get)
 
-print("\nTop 5 Rapid Player for "+month+" ,"+year)
-print("-"*36)
-for i in range (5):
-        print(str(i+1)+". "+str(top_rapid[i])+" ("+str(rapid_rating.get(str(top_rapid[i])))+")")
+        print("\nTop 5 Rapid Player for "+month+", "+year)
+        print("-"*36)
+        rep.write("\nTop 5 Rapid Player for "+month+", "+year+"\n")
+        rep.write("-"*36+"\n")
+        for i in range (5):
+                print(str(i+1)+". "+str(top_rapid[i])+" ("+str(rapid_rating.get(str(top_rapid[i])))+")")
+                rep.write(str(i+1)+". "+str(top_rapid[i])+" ("+str(rapid_rating.get(str(top_rapid[i])))+")"+"\n")
 
-#print(classical_rating)
-                
-top_classical = nlargest(5,classical_rating, key = classical_rating.get)
+        #print(classical_rating)
+                        
+        top_classical = nlargest(5,classical_rating, key = classical_rating.get)
 
-print("\nTop 5 classical Player for "+month+" ,"+year)
-print("-"*36)
-for i in range (5):
-        print(str(i+1)+". "+str(top_classical[i])+" ("+str(classical_rating.get(str(top_classical[i])))+")")
+        print("\nTop 5 classical Player for "+month+", "+year)
+        print("-"*36)
+        rep.write("\nTop 5 classical Player for "+month+", "+year+"\n")
+        rep.write("-"*36+"\n")
+        for i in range (5):
+                print(str(i+1)+". "+str(top_classical[i])+" ("+str(classical_rating.get(str(top_classical[i])))+")")
+                rep.write(str(i+1)+". "+str(top_classical[i])+" ("+str(classical_rating.get(str(top_classical[i])))+")"+"\n")
 
-exit0 = input()
-
-
-
-
+        rep.write("\n\nUsername List: \n")
+        for i in range(len(ulist)):
+                uname = ulist[i]
+                rep.write(uname+", ")
+                if (i+1)%4==0:
+                        rep.write("\n")
+        rep.close()
+        exit0 = input()
 
