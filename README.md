@@ -17,6 +17,9 @@ Report will be shown in terminal, as well as will be available offline in .txt f
 
 You can download [**LichessRating(WINDOWS_x64)**](https://github.com/yoursamlan/LichessRating/raw/master/LichessRating.exe)
 
+App Screen Shot:
+![Screen Shot](./scrnsht.PNG)
+
 ### Some useful links:
 - [Official Group: ♔♛ সাদা কালো মগজাস্ত্র](https://bn.quora.com/q/daba)
 - [Official Team on Lichess: ♔♛ সাদা কালো মগজাস্ত্র](https://lichess.org/team/sAt2fiTW)
